@@ -1,0 +1,38 @@
+
+
+Hook
+useState.
+useEffect hook.
+
+- it is a react hook that allows you to run side effects in you function component.
+- fetching data from API, directly updating the dom, setting up subscription and timers, 
+    listening to events.
+
+    -Asynchronous programming, 
+    - mount, inbetween, unmount
+    - componentDidMount, CompoentDidUpdate, CompoentDidUnmount
+
+    useEffect(  () =>{
+            //your code here
+    },[dependencies]
+    );
+
+    useEffect(()=>{
+        console.log("Hello");
+    })
+
+
+    useEffect(()=>{
+        console.log("Hello");
+    },[])
+
+let a,b;
+      useEffect(()=>{
+        console.log("Hello");
+    },[a,b])
+
+  useEffect(()=>{
+        console.log("Hello");
+
+        return () => {//some code here} //CompoentDidUnmount
+    },[])

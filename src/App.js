@@ -1,24 +1,55 @@
 import logo from './logo.svg';
 import './App.css';
+import Hello from './components/Hello'
+import Counter from './components/Counter';
+import Welcome from './components/Welcome';
+import { useState } from 'react';
+import Counters from './components/Counters';
+import TodoList from './components/TodoList';
+import Counterss from './components/CounterPractise';
+import Form from './components/Form';
+import ParentForm from './components/ParentForm';
+import Groceries from './components/Groceries';
+import { ParentGrocery } from './components/GroceriesParent';
+import { TodoParent } from './components/TodoParent';
+import { UseEffectPractis } from './components/UseEffectPractise';
+import { Stopwatch } from './components/stopwatch';
 
+// Groceries app, similar to todo, you add groceries
+// and add a delete button to remove that groceries
 function App() {
+  const [counter, setCounter] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Stopwatch />
+    <UseEffectPractis />
+    <TodoParent />
+    {/* <ParentGrocery/> */}
+    {/* <ParentForm/> */}
+    {/* <Form/> */}
+    {/* <Counterss /> */}
+    {/* <TodoList/> */}
+    <Counters counter = {counter} 
+    setCounter = {setCounter}/>
+    {/* <Counters counter = {counter} 
+    incrementCounter = {incrementCounter}
+    decrementCounter = {decrementCount} />
+
+<Counters counter = {counter} 
+    incrementCounter = {incrementCounter}
+    decrementCounter = {decrementCount} />
+    <Welcome name = "Alice" message="Welcome to react class"/> */}
+    {/* <div >
+      Hello world
     </div>
+    <Hello/>
+    <Welcome name = "Suresh" message=" I hope you are doing good"
+    /> */}
+    {/* <Hello />
+    <Counter/> */}
+
+    </>
   );
 }
 
