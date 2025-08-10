@@ -5,16 +5,17 @@ export function UseEffectPractis(){
     const [toggle,setToggle] = useState(false);
     const [toggle2,setToggle2] = useState(false);
     
-    useEffect(()=>{
-        console.log("Hello-runs all the time");
-    })
+    // useEffect(()=>{
+    //     console.log("Hello-runs all the time");
+    // })
 
-    useEffect(()=>{
-        console.log("Hello - runs only at the beginning");
-    },[])
+    // useEffect(()=>{
+    //     console.log("Hello - runs only at the beginning");
+    // },[])
 
       useEffect(()=>{
-        console.log("Hello - runs at the beninning and when toggle value cahnges");
+        console.log("Hello - runs at the beninning and when toggle value cahnges", toggle);
+        return () => console.log("Toggle unmount", toggle)
     },[toggle])
 
     return(

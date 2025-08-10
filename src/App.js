@@ -14,6 +14,8 @@ import { ParentGrocery } from './components/GroceriesParent';
 import { TodoParent } from './components/TodoParent';
 import { UseEffectPractis } from './components/UseEffectPractise';
 import { Stopwatch } from './components/stopwatch';
+import { Clock } from './components/Clock';
+import { Fetch } from './components/Fetch';
 
 // Groceries app, similar to todo, you add groceries
 // and add a delete button to remove that groceries
@@ -22,6 +24,8 @@ function App() {
 
   return (
     <>
+    <Fetch />
+    <Clock />
     <Stopwatch />
     <UseEffectPractis />
     <TodoParent />
