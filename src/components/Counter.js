@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 
 function Counter(){
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useLocalStorage('count',0);
     const decrementCount = ()=>{ 
                 if (counter > 0) setCounter(counter-1);}
     return(
