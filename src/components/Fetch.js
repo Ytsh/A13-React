@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { addToCart } from "../redux/reducer/cartSlice";
 
 export function Fetch(){
 
     const [data,setData] = useState(null);
     const [loading,setLoading] = useState(true);
     const [error,setError] = useState(null);
-
+    const dispatch = useDispatch();
     useEffect(()=>{
         setLoading(true);
 
@@ -41,7 +43,7 @@ export function Fetch(){
                                 <Card.Body className="d-flex flex-column">
                                     <Card.Title>{d.title}</Card.Title>
                                     <Card.Text className="flex-grow-1"> {d.price} </Card.Text>
-                                    <Button variant="primary">Add to cart</Button>
+                                    <Button variant="primary" onClick={()=> dispatch(addToCart(d))}>Add to cart</Button>
                                     <Link to={`/product/${d.id}`}>View detail</Link>
                                 </Card.Body>
                             </Card>

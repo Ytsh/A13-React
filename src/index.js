@@ -16,8 +16,8 @@ root.render(
     <Provider store={store}>
         <AuthProvider>
             <BrowserRouter>
-            <CounterUsingRedux />
-                {/* <App1 /> */}
+            {/* <CounterUsingRedux /> */}
+                <App1 />
                 {/* <App/> */}
             </BrowserRouter>
         </AuthProvider>
